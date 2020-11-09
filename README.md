@@ -5,7 +5,7 @@ Katas de programación funcional
 
 Este proyecto usa volta para fijar las versiones de node y de yarn
 
-Para poder correr los test tenedremos que instalar las dependencias necesarias
+Para poder correr los test tendremos que instalar las dependencias necesarias
 ```bash
 yarn install
 ```
