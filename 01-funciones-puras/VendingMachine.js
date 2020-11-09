@@ -26,9 +26,10 @@ const {product} = require('./product');
 const {checkCredit} = require('./checkCredit');
 const {change} = require('./change');
 
-VendingMachine = {
+const VendingMachine = {
   products
 }
 
 // VendingMachine.buyProduct = (coins , coordinates) => ...
 
+module.exports =  {VendingMachine}
