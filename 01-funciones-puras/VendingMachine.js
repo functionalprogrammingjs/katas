@@ -57,7 +57,5 @@ VendingMachine.buyProduct = (coins , coordinates) => {
 
 }
 
-VendingMachine.buyProduct([0.10,0.25,1,0.2],["A",7])  // ?
+module.exports = {VendingMachine}
 
-
-module.exports = {products, product, checkCredit, change, VendingMachine}
