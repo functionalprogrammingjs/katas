@@ -11,10 +11,7 @@
  * @ADT semigroup
  */
 
-const change = credit => ({
-  credit,
-  subtract: price => change(credit - price)
-});
+// const change = credit =>
 
 
 module.exports = {change}

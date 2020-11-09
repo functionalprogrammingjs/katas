@@ -8,9 +8,7 @@
  * @Hindley-Milner  credit :: number -> a
  * @ADT semigroup (with an empty will be a monoid)
  */
-const credit = balance => ({
-  balance,
-  add: amount =>  credit(balance + amount),
-})
+
+// const credit = balance => ...
 
 module.exports = {credit};

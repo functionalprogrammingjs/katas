@@ -74,21 +74,3 @@ Las funciones deberían de pasar los tests:
     ✓ given a product list , a row and a column out of  products scope , should return an error array
 
 ```
-
-## [01-funciones-puras-ejercicio-2]
-
-En esta segunda parte del ejercicio , una vez tenemos creadas las funciones anteriormente descritas
-vamos a usarlas para poder componer nuestra máquina expendedora de forma que le pasemos un array de monedas
-,unas coordenadas del producto que queremos y nos devolverá el producto seleccionado junto con  la vuelta.
-
-La información de los parámetros de entrada y las firmas se pueden encontrar en el archivo:
-`01-funciones-puras/VendingMachine.js`
-
-```bash
- PASS  01-funciones-puras/VendingMachine.spec.js
-  When buying a product
-    ✓ should return an object with the product and change  (2 ms)
-    ✓ should return an error if no product available
-    ✓ should return an error message if not enough credit
-
-```

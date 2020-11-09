@@ -12,11 +12,7 @@
  * @ADT podríamos llevarlo a un functor option / maybe / either y generalizarlo de esa forma,
  * o incluso llevarlo a una monada si quisiéramos trabajar en multiples contextos
  */
-const product = products => row => col =>{
-  const result = products.filter(product =>
-    product.position[0] === row && product.position[1] === col
-  ) ;
-  return result.length > 0 ? {product:result[0]} : {error:"error no existe el producto"};
-}
+
+// const product = products => row => col => ...
 
 module.exports = {product};

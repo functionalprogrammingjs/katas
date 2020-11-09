@@ -10,9 +10,6 @@
  * @ADT (setoide) -> ord
  */
 
-const checkCredit = product =>  ({
-  product,
-  gte: amount => amount >= product.price
-});
+// const checkCredit = product => ...
 
 module.exports = {checkCredit}
