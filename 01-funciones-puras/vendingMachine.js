@@ -20,10 +20,7 @@ const products = [
  * @Hindley-Milner  credit :: number -> a
  * @ADT semigroup (with an empty will be a monoid)
  */
-const credit = balance => ({
-  balance,
-  add: amount =>  credit(balance + amount),
-})
+ // const credit = balance => ...
 
 // -------------
 // 2.- PRODUCTO
@@ -38,12 +35,8 @@ const credit = balance => ({
  * @ADT podríamos llevarlo a un functor option / maybe / either y generalizarlo de esa forma,
  * o incluso llevarlo a una monada si quisiéramos trabajar en multiples contextos
  */
-const product = products => row => col =>{
-  const result = products.filter(product =>
-    product.position[0] === row && product.position[1] === col
-  ) ;
-  return result.length > 0 ? {product:result[0]} : {error:"error no existe el producto"};
-}
+ // const product = products => row => col => ...
+
 
 // ---------------
 // 3.- COMPARACIÓN
@@ -57,11 +50,7 @@ const product = products => row => col =>{
  * @ADT (setoide) -> ord
  */
 
-const checkCredit = product =>  ({
-    product,
-    gte: amount => amount >= product.price
-  });
-
+// const checkCredit = product => ...
 
 
 // ------------
@@ -74,10 +63,8 @@ const checkCredit = product =>  ({
  * @Hindley-Milner  change ::  number -> a
  * @ADT semigroup
  */
-const change = credit => ({
-  credit,
-  subtract: price => change(credit - price)
-});
+
+// const change = credit => ...
 
 
 // --------------
