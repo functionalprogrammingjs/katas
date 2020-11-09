@@ -1,17 +1,17 @@
-const {returningChange} = require('./VendingMachine')
+const {change} = require('./VendingMachine')
 
 describe('When testing a returningChange function', () => {
-  let change;
+  let returningChange;
   beforeEach(() => {
-    change = returningChange(10)
+    returningChange = change(10)
   })
 
   it('should return a structure with a subtract function ', () => {
-    expect(change).toHaveProperty('subtract');
+    expect(returningChange).toHaveProperty('subtract');
   });
 
   it('should subtract a value and return the value in the structure ', () => {
-    expect(change.subtract(4)).toHaveProperty('credit', 6);
+    expect(returningChange.subtract(4)).toHaveProperty('credit', 6);
   });
 
 });
