@@ -70,7 +70,7 @@ const checkCredit = product =>  ({
 /**
  * @desc Implementar una función que reciba un saldo  y que devuelva una
  * estructura con un método subtract que pueda restar un precio de un producto
- * @example change(50).substract(12) // {credit: 38, subtract: function }
+ * @example change(50).subtract(12) // {credit: 38, subtract: function }
  * @Hindley-Milner  change ::  number -> a
  * @ADT semigroup
  */
@@ -98,36 +98,3 @@ const change = credit => ({
  *
  * @example buyProduct([0.10,0.25,1,2],["A",2]) // --> {product:'Ritz', change:'0.35' }
  */
-
-
-const buyProduct = (coins , coordinates) => {
-  // insertar monedas
-  const balance = coins.reduce((acc,cur) => acc.add(cur),credit(0)) // ?
-  // seleccionar producto
-  const selectedProduct = product(products)(coordinates[0])(coordinates[1]) // ?
-  // comprobar si hay error
-  if (selectedProduct.error) {
-    return selectedProduct;
-  }
-  // ver si tengo crédito suficiente para comprar el producto
-  const hasCredit = checkCredit(selectedProduct.product).gte(balance.balance) // ?
-  if (!hasCredit) {
-    return {
-      error: 'no tiene suficiente dinero para comprar el producto',
-      change: balance.balance
-    }
-  }
-  // calcular el cambio
-  const givenChange = change(balance.balance).subtract(selectedProduct.product.price) // ?
-  // retornamos un objeto con el producto y el cambio
-  return {
-    product: selectedProduct.product.name,
-    change:givenChange.credit
-  }
-
-}
-
-buyProduct([0.10,0.25,1,0.2],["A",3])  // ?
-
-
-module.exports = {products, credit, product, checkCredit, change}
