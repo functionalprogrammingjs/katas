@@ -36,12 +36,12 @@ Vamos a crearnos una máquina expendedora.
 Para esta primera parte de la kata tendremos que implementar
 varias funciones:
 
-* [credit.js](./01-funciones-puras-ejercicio-1/credit.js):  Implementar una función credit a la que se le puedan pasar cantidades y pueda sumarlas
-* [product.js](./01-funciones-puras-ejercicio-1/product.js): Implementar una función que dado un array de objetos y unas coordenadas fila y columna , 
+* [credit.js](./01-funciones-puras/credit.js):  Implementar una función credit a la que se le puedan pasar cantidades y pueda sumarlas
+* [product.js](./01-funciones-puras/product.js): Implementar una función que dado un array de objetos y unas coordenadas fila y columna , 
 devuelva una estructura con una propiedad "product" que contenga el objeto del array.
-* [checkCredit.js](./01-funciones-puras-ejercicio-1/checkCredit.js): Implementar una función que reciba un producto y que devuelva una estructura que tenga una función
+* [checkCredit.js](./01-funciones-puras/checkCredit.js): Implementar una función que reciba un producto y que devuelva una estructura que tenga una función
  a la que se le puede preguntar si la cantidad es mayor o igual 
-* [change.js](./01-funciones-puras-ejercicio-1/change.js): Implementar una función que reciba un saldo  y que devuelva una estructura con un método subtract 
+* [change.js](./01-funciones-puras/change.js): Implementar una función que reciba un saldo  y que devuelva una estructura con un método subtract 
 que pueda restar un precio de un producto
 
 La información de los parámetros de entrada y las firmas se pueden encontrar en los correspondientes archivos
