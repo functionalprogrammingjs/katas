@@ -1,5 +1,6 @@
 
-const {products, product} = require("./VendingMachine");
+const {product} = require("./product");
+const {products} = require("./products");
 
 describe('When testing product function ', () => {
 
@@ -10,7 +11,5 @@ describe('When testing product function ', () => {
   it('given a product list , a row and a column out of  products scope , should return an error array', () => {
     expect(product(products)("J")(3)).toEqual({error: "error no existe el producto"});
   });
-
-
 
 });

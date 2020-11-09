@@ -1,4 +1,4 @@
-const {change} = require('./VendingMachine')
+const {change} = require('./change')
 
 describe('When testing a returningChange function', () => {
   let returningChange;
@@ -15,3 +15,4 @@ describe('When testing a returningChange function', () => {
   });
 
 });
+
