@@ -1,4 +1,4 @@
-const {checkCredit} = require('./vendingMachine')
+const {checkCredit} = require('./VendingMachine')
 
 describe('When testing a checkCredit function', () => {
   let creditOrd;

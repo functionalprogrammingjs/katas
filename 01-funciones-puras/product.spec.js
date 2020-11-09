@@ -1,5 +1,5 @@
 
-const {products, product} = require("./vendingMachine");
+const {products, product} = require("./VendingMachine");
 
 describe('When testing product function ', () => {
 

@@ -1,5 +1,5 @@
 
-const {credit} = require("./vendingMachine");
+const {credit} = require("./VendingMachine");
 
 describe('When testing credit function ', () => {
 
