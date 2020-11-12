@@ -20,3 +20,22 @@ const product = products => row => col =>{
 }
 
 module.exports = {product};
+
+
+const compareBy = getter =>  predicate => obj => {
+  return predicate(getter(obj))
+}
+
+
+
+const bootBouth = f => g => x => f(x) && g(x)
+
+
+
+
+const compareRow = compareBy(x => x.position[0])(x => x === "A")
+const compareCol = compareBy(x => x.position[1])(x => x === 2)
+
+const hasProduct = bootBouth(compareRow)(compareCol);
+
+const find =
