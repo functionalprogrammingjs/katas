@@ -1,5 +1,5 @@
 
-const {credit} = require("./credit");
+const {credit, add, reduce} = require("./credit");
 
 describe('When testing credit function ', () => {
 
@@ -22,3 +22,30 @@ describe('When testing credit function ', () => {
   })
 
 });
+
+// =======================================================================================
+
+describe("When testing functions to be use with credit", () => {
+
+  describe("When testing `add` function", () => {
+    it('should add 2 numbers', () => {
+      expect(add(5,3)).toBe(8);
+    });
+
+  })
+
+  describe("When testing `reduce` function", () => {
+    it('should reduce and array of values into a given reducer', () => {
+      expect(reduce((a,b) => a.concat(b))("")(["hola ", "mundo"])).toBe("hola mundo");
+    });
+  })
+
+  describe("When testing `credit` function", () => {
+    it('should add a given array of credits', () => {
+      expect(credit([10,20,30])).toBe(60);
+    });
+  })
+
+
+
+  })
