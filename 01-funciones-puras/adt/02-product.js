@@ -16,6 +16,13 @@
  *   -. la función comparadora
  *   -. el array de productos (este dato viene dado en Products.js)
  *
+ *  [2] Crear una función que compre el producto buyProduct, le pasaremos:
+ *   -. créditos
+ *   -. position
+ *   -. Utilizará findProduct para obtener el producto
+ *   -. Tendrá que comprobar que existe el producto en las coordenadas dadas
+ *      que el precio es suficiente y que existe cantidad del producto y si no devolverá
+ *      un texto genérico "Ha sucedido un error".
  *
  */
 
@@ -50,15 +57,19 @@ _findProduct(['A',1]); // ?
 const {getCredit} = require('./01-credit');
 
 // buyPorduct :: [number] -> [string, number] -> a
+
+// TODO: DUDA, a lo mejor tendría que cambiar la firma para que buyProduct reciba un cantidad y no un array de números
+
 const buyProduct = (credits, position) => {
   const credit = getCredit(credits);
   const product = findProduct(position);
-  return (product && product.price <= credit) ? product : new Error('Ha sucedido un error')
+  // TODO: esto luego lo separamos con los ADT
+  return (product && product.price <= credit && product.quantity > 0) ? product : new Error('Ha sucedido un error')
 }
 
 buyProduct([1,0.5,1],["A",1]) // ?
 
 
-module.exports = {findProduct};
+module.exports = {findProduct, buyProduct};
 
 

@@ -32,7 +32,7 @@ const add = (a,b) => a + b;
 // [2] reduce :: (a -> b) -> number -> c -> number
 const reduce = reducer => initial => xs => xs.reduce(reducer,initial);
 
-// [3] getCredit :: (a->b) -> number -> number
+// [3] getCredit :: (a->b) -> number -> xs -> number
 const getCredit = reduce(add)(0) // ?
 
 // TODO: Extra, también podríamos utilizar las funciones de Ramda (add, reduce)
