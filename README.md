@@ -36,9 +36,37 @@ Vamos a crearnos una máquina expendedora.
 Para esta primera parte de la kata tendremos que implementar
 varias funciones:
 
-* [credit.js](./01-funciones-puras-ejercicio-1/credit.js):  Implementar una función credit a la que se le puedan pasar cantidades y pueda sumarlas
-* [product.js](./01-funciones-puras-ejercicio-1/product.js): Implementar una función que dado un array de objetos y unas coordenadas fila y columna , 
-devuelva una estructura con una propiedad "product" que contenga el objeto del array.
+La idea es crearnos abstracciones sobre tipos de datos algebraicos que luego podamos usar en nuestra máquina expendedora.
+Lo que vamos a intentar es desacoplar nuestras funciones matemáticas de las estructuras para así aprovecharnos de la reutilización y convertir nuestra programación en elementos desacoplados y resilentes al cambio.
+Vamos a intentar que el peso de la lógica de negocio recaiga sobre las funciones y que el flujo de la aplicación utilice los datos algebraicos en vez de acoplarlos a nuestros objetos.
+
+Para la primera parte podemos ayudarnos de la librería funcional Ramda
+Para la segunda parte introduciremos los tipos de datos algebraicos (ADT) y usaremos
+la librería crocks
+
+---
+El flujo de nuestra aplicación final sería:
+* tenemos una máquina expendedora
+* [1] introducimos monedas en la máquina
+* [2] Elegimos producto mediante unas coordenadas (fila, columna)
+* [3] La máquina comprueba si con el crédito introducido y el producto seleccionado nos lo puede vender
+* [4] Si esto es correcto me devolverá el producto , el cambio y restará elproducto a la cantidad. De lo contrario nos informará del error
+
+
+* [01-credit.js | add ,reduce, getCredit](./01-funciones-puras-ejercicio-1/credit.js):  
+  Implementar una función credit a la que se le puedan pasar cantidades y pueda sumarlas,
+  Empzaremos con un array de monedas
+
+
+* [02-product.js | findProduct, buyProduct](./01-funciones-puras-ejercicio-1/product.js): 
+  Implementar una función que dado un array de objetos y unas coordenadas fila y columna (array con 2 datos), 
+  devuelva una estructura con una propiedad "product" que contenga el objeto del array.
+  
+* Devolver
+
+
+
+
 * [checkCredit.js](./01-funciones-puras-ejercicio-1/checkCredit.js): Implementar una función que reciba un producto y que devuelva una estructura que tenga una función
  a la que se le puede preguntar si la cantidad es mayor o igual 
 * [change.js](./01-funciones-puras-ejercicio-1/change.js): Implementar una función que reciba un saldo  y que devuelva una estructura con un método subtract 

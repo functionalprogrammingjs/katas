@@ -3,7 +3,7 @@
 // --------------
 
 /**
- * @desc COn las funciones anteriormente creadas vamos a implementar una máquina
+ * @desc Con las funciones anteriormente creadas vamos a implementar una máquina
  * expendedora de forma que le pasemos un array de monedas unas coordenadas del producto
  * que queremos y nos devolverá el producto seleccionado junto a la vuelta.
  *
